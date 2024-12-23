@@ -4,7 +4,7 @@ from crewai import Task
 class ContentCreationTasks:
 
 
-     def coordination_task(self, agent, tasks_results, overall_strategy):
+    def coordination_task(self, agent, tasks_results, overall_strategy):
         return Task(
             description=dedent(f"""\
                 Review and coordinate the outputs from all tasks to ensure alignment 
@@ -35,6 +35,7 @@ class ContentCreationTasks:
             async_execution=True,
             agent=agent
         )
+
 
     def seo_content_task(self, agent, keywords, content_context):
         return Task(
@@ -84,6 +85,7 @@ class ContentCreationTasks:
             async_execution=False,
             agent=agent
         )
+
 
     def product_description_task(self, agent, product_list, tone_of_voice):
         return Task(
