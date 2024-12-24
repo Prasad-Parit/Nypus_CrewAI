@@ -1,12 +1,10 @@
 import os
 from dotenv import load_dotenv
 import requests
-from crewai import tools
 
-# Load environment variables from .env file
+# Load environment variables from the .env file
 load_dotenv()
 
-# Fetch the API key from the environment
 API_KEY = os.getenv("API_KEY")
 
 if not API_KEY:
@@ -41,7 +39,7 @@ class SerperSearchTool:
 
     def run(self, query):
         headers = {
-            'Authorization': f'Bearer {API_KEY}',  # Use the API key in the authorization header
+            'Authorization': f'Bearer {API_KEY}',  
             'Content-Type': 'application/json'
         }
 
@@ -50,8 +48,8 @@ class SerperSearchTool:
 
         try:
             response = requests.get(url, headers=headers)
-            response.raise_for_status()  # Raise error for bad responses
-            return response.json()  # Return the response as a JSON object
+            response.raise_for_status()  
+            return response.json()  
         except requests.exceptions.RequestException as e:
             return f"Error fetching data from Serper API: {str(e)}"
 
@@ -99,3 +97,4 @@ website_search_tool = WebsiteSearchTool()
 retrieval_augmented_generation_tool = RetrievalAugmentedGenerationTool()
 web_scraping_tool = WebScrapingTool()
 my_custom_tool = MyCustomTool()
+

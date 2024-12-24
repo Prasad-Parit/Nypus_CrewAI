@@ -2,8 +2,6 @@ from textwrap import dedent
 from crewai import Task
 
 class ContentCreationTasks:
-
-
     def coordination_task(self, agent, tasks_results, overall_strategy):
         return Task(
             description=dedent(f"""\
@@ -17,7 +15,6 @@ class ContentCreationTasks:
             async_execution=False,
             agent=agent
         )
-
 
     def trend_research_task(self, agent, target_audience, industry_context):
         return Task(
@@ -36,7 +33,6 @@ class ContentCreationTasks:
             agent=agent
         )
 
-
     def seo_content_task(self, agent, keywords, content_context):
         return Task(
             description=dedent(f"""\
@@ -53,7 +49,6 @@ class ContentCreationTasks:
             agent=agent
         )
 
-   
     def social_media_task(self, agent, platforms, campaign_context):
         return Task(
             description=dedent(f"""\
@@ -70,7 +65,6 @@ class ContentCreationTasks:
             agent=agent
         )
 
-
     def email_marketing_task(self, agent, target_audience, product_updates):
         return Task(
             description=dedent(f"""\
@@ -85,7 +79,6 @@ class ContentCreationTasks:
             async_execution=False,
             agent=agent
         )
-
 
     def product_description_task(self, agent, product_list, tone_of_voice):
         return Task(
@@ -103,7 +96,6 @@ class ContentCreationTasks:
             agent=agent
         )
 
-
     def video_script_task(self, agent, video_purpose, audience_demographics):
         return Task(
             description=dedent(f"""\
@@ -120,7 +112,6 @@ class ContentCreationTasks:
             agent=agent
         )
 
-  
     def infographic_design_task(self, agent, data_points, infographic_context):
         return Task(
             description=dedent(f"""\
@@ -136,7 +127,6 @@ class ContentCreationTasks:
             async_execution=True,
             agent=agent
         )
-
 
     def proofreading_task(self, agent, draft_content, content_context):
         return Task(
