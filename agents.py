@@ -2,6 +2,23 @@ from textwrap import dedent
 from crewai import tasks
 from tools import directory_read_tool, file_read_tool, serper_search_tool, website_search_tool, retrieval_augmented_generation_tool, web_scraping_tool, my_custom_tool
 
+
+# agents.py
+class Agent:
+    def __init__(self, role, goal, tools, backstory, verbose=False):
+        self.role = role
+        self.goal = goal
+        self.tools = tools
+        self.backstory = backstory
+        self.verbose = verbose
+
+    def execute(self, task):
+        if self.verbose:
+            print(f"Executing {task.description} as {self.role}")
+        return task.run(self)
+
+
+
 class ContentCreationAgents:
 
     # Leader Agent: Content Director

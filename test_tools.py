@@ -5,14 +5,14 @@ def test_directory_read_tool():
     # Instantiate the DirectoryReadTool
     directory_tool = directory_read_tool
     # Test with a sample directory path
-    result = directory_tool.run("sample_directory")
+    result = directory_tool.run("ARTH 3.0")
     print(f"Directory Read Tool Output: {result}")
 
 def test_file_read_tool():
     # Instantiate the FileReadTool
     file_tool = file_read_tool
     # Test with a sample file path (you need to make sure this file exists in your directory)
-    result = file_tool.run("sample_file.txt")
+    result = file_tool.run("cpp.txt")
     print(f"File Read Tool Output: {result}")
 
 def test_serper_search_tool():

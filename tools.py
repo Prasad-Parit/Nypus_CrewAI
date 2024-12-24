@@ -2,7 +2,6 @@ import os
 from dotenv import load_dotenv
 import requests
 
-# Load environment variables from the .env file
 load_dotenv()
 
 API_KEY = os.getenv("API_KEY")
@@ -97,4 +96,3 @@ website_search_tool = WebsiteSearchTool()
 retrieval_augmented_generation_tool = RetrievalAugmentedGenerationTool()
 web_scraping_tool = WebScrapingTool()
 my_custom_tool = MyCustomTool()
-

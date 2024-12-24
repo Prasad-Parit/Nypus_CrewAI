@@ -1,7 +1,20 @@
 from textwrap import dedent
 from crewai import Task
 
+class Agent:
+    def __init__(self, role, goal, tools, backstory, verbose=False):
+        self.role = role
+        self.goal = goal
+        self.tools = tools
+        self.backstory = backstory
+        self.verbose = verbose
+
+    def execute(self, task):
+        if self.verbose:
+            print(f"Executing {task.description} as {self.role}")
+        return task.run(self)
 class ContentCreationTasks:
+
     def coordination_task(self, agent, tasks_results, overall_strategy):
         return Task(
             description=dedent(f"""\
