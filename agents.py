@@ -8,7 +8,7 @@ class ContentCreationAgents:
         return Agent(
             role="Content Director",
             goal="Oversee and coordinate all content creation tasks, ensure alignment with marketing strategy, and approve final outputs.",
-            tools=["Trello", "Asana"],
+            tools=["DirectoryReadTool", "FileReadTool"],
             backstory=dedent("""
                 As the Content Director, your mission is to ensure seamless coordination and alignment 
                 across all content creation tasks. Your strategic oversight will drive impactful 
@@ -22,7 +22,7 @@ class ContentCreationAgents:
         return Agent(
             role="Trend Researcher",
             goal="Generate blog post ideas based on trending topics.",
-            tools=["Google Trends", "BuzzSumo"],
+            tools=["SerperDevTool", "WebsiteSearchTool"],
             backstory=dedent("""
                 As a Trend Researcher, your mission is to identify emerging topics and audience interests 
                 by analyzing market data, competitor content, and industry trends. Your curated insights 
@@ -36,7 +36,7 @@ class ContentCreationAgents:
         return Agent(
             role="SEO Content Writer",
             goal="Write SEO-optimized articles and web content.",
-            tools=["SEMrush", "Ahrefs"],
+            tools=["RetrievalAugmentedGenerationTool"],
             backstory=dedent("""
                 As an SEO Content Writer, your mission is to craft engaging and keyword-rich articles 
                 that enhance online visibility. Your expertise in SEO best practices ensures that 
@@ -50,7 +50,7 @@ class ContentCreationAgents:
         return Agent(
             role="Social Media Specialist",
             goal="Create social media posts tailored to different platforms.",
-            tools=["Hootsuite", "Buffer"],
+            tools=["WebScrapingTool", "DirectoryReadTool"],
             backstory=dedent("""
                 As a Social Media Specialist, your mission is to craft platform-specific posts that 
                 captivate audiences and drive engagement. Your creativity and understanding of 
@@ -64,7 +64,7 @@ class ContentCreationAgents:
         return Agent(
             role="Email Marketing Specialist",
             goal="Develop email marketing content and newsletters.",
-            tools=["Mailchimp", "HubSpot"],
+            tools=["FileReadTool", "RetrievalAugmentedGenerationTool"],
             backstory=dedent("""
                 As an Email Marketing Specialist, your mission is to create compelling email campaigns 
                 that inform, engage, and convert subscribers. Your ability to write persuasive copy 
@@ -78,7 +78,7 @@ class ContentCreationAgents:
         return Agent(
             role="E-commerce Copywriter",
             goal="Craft product descriptions for e-commerce sites.",
-            tools=["Grammarly", "Hemingway"],
+            tools=["MyCustomTool", "DirectoryReadTool"],
             backstory=dedent("""
                 As an E-commerce Copywriter, your mission is to create compelling and informative 
                 product descriptions that highlight features and benefits. Your words will help 
@@ -92,7 +92,7 @@ class ContentCreationAgents:
         return Agent(
             role="Video Scriptwriter",
             goal="Produce video scripts for promotional materials.",
-            tools=["Canva", "Visme"],
+            tools=["FileReadTool", "RetrievalAugmentedGenerationTool"],
             backstory=dedent("""
                 As a Video Scriptwriter, your mission is to transform ideas into engaging video scripts 
                 that resonate with viewers. Your storytelling skills and attention to detail will 
@@ -106,7 +106,7 @@ class ContentCreationAgents:
         return Agent(
             role="Infographic Designer",
             goal="Design infographics based on data visualization principles.",
-            tools=["Adobe Illustrator", "Figma"],
+            tools=["WebScrapingTool", "DirectoryReadTool"],
             backstory=dedent("""
                 As an Infographic Designer, your mission is to create visually stunning infographics 
                 that simplify complex information. Your designs will enhance understanding and 
